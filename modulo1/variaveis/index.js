@@ -45,3 +45,11 @@ b = c
 console.log ("O novo valor de a é", a)
 console.log ("O novo valor de b é", b)
 
+// Desafio 
+
+let numeroUm = prompt("Me dê um número.");
+let numeroDois = prompt("Me dê outro número."); 
+numeroUm = Number(numeroUm); 
+numeroDois = Number(numeroDois);
+console.log(numeroUm + numeroDois);
+console.log(numeroUm * numeroDois);
