@@ -1,8 +1,8 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-function soma(num1, num2) {
-  // implemente sua lógica aqui
+function soma() {
+  var resultado = num1 
   return num1 + num2
 }
 
@@ -26,7 +26,8 @@ function calculaAreaRetangulo() {
 function imprimeIdade() {
   anoAtual = prompt("Em que ano nós estamos?")
   nascimento = prompt("Em que ano você nasceu?")
-  return anoAtual - nascimento
+  var resultado = anoAtual - nascimento
+  return resultado
 }
 
 // EXERCÍCIO 03
