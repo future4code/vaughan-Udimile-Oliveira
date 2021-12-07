@@ -29,28 +29,64 @@ linhas de codigos para cada vez que seja necessário imprimir isso no console
 // Exercicios de escrita
 // 1. a)
 
-//function mensagem(){
-//    "Eu sou Udimile, tenho 24 anos, moro em Salvador, sou estudante e amo animais"
-//}
-//console.Log(mensagem())
+// function mensagem(){
+//    console.log("Eu sou Udimile, tenho 24 anos, moro em Salvador, sou estudante e amo animais")
+
+// }
+// mensagem()
+
 // b)
-function informacoes(nome, idade, cidade, ocupacao){
-    nome = "Udimile"
-    idade = 24
-    cidade = "Salvador"
-    ocupacao = "Estudante";
-
-    console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${ocupacao}.`)
-}
-
+// function informacoes(nome, idade, cidade, ocupacao){
+//     return `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${ocupacao}.`
+// }
+// console.log(informacoes("Udimile", 24, "Salvador", "Estudante"))
 
 //2. a)
 
-//let num1 = prompt("Digite um número.")
-//let num2 = prompt("Digite outro número.")
-//function num(num1, num2){
-//    num = num1 + num2 
-//return num    
-//}
-//console.log(num)
+// function soma(num1, num2){
+//     return num1 + num2
+// }
+// console.log(soma(3, 5))
 
+//b)
+// function booleano(num1, num2){
+//     return num1 >= num2 
+// }
+// console.log(booleano(3, 4))
+
+//c) 
+// function parImpar(num1){
+//  const resto = num1%2
+//   return resto == 0   
+// }
+
+// //d) 
+// function frase(mensagem){
+//     const tamanho = mensagem.length
+//     const fraseEmMaiusculo = mensagem.toUpperCase()
+//     console.log(tamanho, fraseEmMaiusculo)
+// }
+// frase("Eu sou uma estudante")
+
+//3.
+// function soma(num1, num2){
+//     return num1 + num2
+// }
+// function subtracao(num1, num2){
+//     return num1 - num2
+// }
+// function multiplicacao(num1, num2){
+//     return num1 * num2
+// }
+// function divisao(num1, num2){
+//     return num1 / num2
+// }
+
+// const numero1 = Number(prompt("Digite um número."))
+// const numero2 = Number(prompt("Digite outro número"))
+
+// console.log("Números inseridos: ", numero1, numero2)
+// console.log("Soma: ",(soma(numero1, numero2)))
+// console.log("Diferença: ",(subtracao(numero1, numero2)))
+// console.log("Multiplicação: ",(multiplicacao(numero1, numero2)))
+// console.log("Divisão: ",(divisao(numero1, numero2)))
