@@ -32,23 +32,38 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    let par = array.filter(function numerosPares(a){
-        return (a % 2) === 0
+    array = array.filter (function numerosPares(a){
+        return (a % 2) === 0})
+    array = array.map(function(a){
+        return a**2
     })
-    let elevadoADois = par.map(Math.pow(elevadoADois, 2))
-    
-    console.log(elevadoADois)
-    return elevadoADois
+        return array
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    array = array.sort(function compararNumeros(a, b) {
+        return b - a;
+      }) 
+
+      return array[0]
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+function numeroMaior() {if (num1 > num2){
+    return num1
+} else {return num2}}
+function numeroMenor(){
+if (num1 < num2){
+    return num1
+} else {return num2}}
+const objeto = {
+    maiorNumero: numeroMaior(),
+    maiorDivisivelPorMenor: numeroMaior() % numeroMenor() === 0,
+    diferenca: numeroMaior() - numeroMenor(),
+}
+return objeto
 }
 
 // EXERCÍCIO 08
@@ -68,17 +83,27 @@ function retornaSegundoMaiorESegundoMenor(array) {
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+
+    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
+
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+   const outraPessoa = {
+       ...pessoa,
+       nome: "ANÔNIMO"
+   }
+   return outraPessoa
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+    pessoa = pessoa.map(altura >= 1.5 || idade >= 14 || idade < 60)
+            return pessoa
+        
+    
+        
 }
 
 // EXERCÍCIO 13B
