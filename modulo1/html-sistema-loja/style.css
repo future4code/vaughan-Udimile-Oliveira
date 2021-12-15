@@ -1,0 +1,63 @@
+.sobre{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.redes-sociais{
+    font-family: sans-serif;
+}
+.introducao{
+    font-size: 17px;
+    font-family: sans-serif;
+    text-align: center;
+
+}
+a{
+    
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+.nome-cafeteria{
+    font-family: sans-serif;
+    font-size: 22px;
+    color: firebrick; 
+    text-align: center;
+
+}
+h2{
+    font-family: sans-serif;
+    color: tomato;
+    text-align: center;
+}
+h1{
+    color: firebrick; 
+}
+li{
+    font-family: sans-serif;
+    
+}
+form{
+    font-family: sans-serif;
+    text-align: center;
+}
+table{
+    font-family: sans-serif;
+    text-align: center;
+}
+button{
+    background-color: white;
+    text-align: center;
+
+}
+div{
+    
+    margin-bottom: 50px;
+    margin: 10px 50px 10px 50px;
+    text-align: center;
+}
+a{
+    padding: 50px 50px;
+    text-align: center;
+}
