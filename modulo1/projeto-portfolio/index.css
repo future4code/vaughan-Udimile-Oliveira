@@ -3,6 +3,78 @@
     text-align: center;
 }
 header{
+    margin: 10px;
+    padding: 10px;
     text-align: center;
+    border-radius: 25px;
+    background-color: #8DA9C4;
+   
+}
+footer{
+    background-color: #8DA9C4;
+    border-radius: 25px;
+    border-bottom-color: blanchedalmond;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+   
+}
+.container{
+    background-color: #eef4ed ;
+    color: #0B2545;
+    margin: 0%;
+    padding: 5%;
     
+    border-color: black;
+
+}
+body{
+    background-color: #eef4ed;
+}
+form{
+    
+    height: 200px;
+    text-align: right;
+
+}
+label{
+    display: block;
+
+}
+a{
+    text-decoration: none;
+    color: #0B2545;
+    padding: 5%;
+}
+input{
+    border-style:hidden 1px;
+    border-radius: 5px;
+    
+}
+.container-portfolio{
+    text-align: left;
+    
+}
+.imagem-perfil{
+    box-shadow: 3px 5px 4px #0B2545;
+    border-radius: 20px;
+}
+h3{
+    color: #13315c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+}
+.link-cafeteria{
+    text-align: left;
+
+}
+.container-sobre-mim{
+    padding-bottom: 10%;
+}
+button{
+    margin: 10px 10px;
+    
+}
+main{
+    margin: 10px 20px 20px 20px
 }
