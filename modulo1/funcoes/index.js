@@ -90,3 +90,21 @@ linhas de codigos para cada vez que seja necessário imprimir isso no console
 // console.log("Diferença: ",(subtracao(numero1, numero2)))
 // console.log("Multiplicação: ",(multiplicacao(numero1, numero2)))
 // console.log("Divisão: ",(divisao(numero1, numero2)))
+
+//Desafio
+//1
+//a)
+// const imprimeNoConsole = (paramUm) => console.log(paramUm)
+//b) 
+// const doisValores = (num1, num2) => {
+    // let soma = (num1 + num2)
+    // return imprimeNoConsole(soma)
+// }
+//  doisValores(5,7)
+//2
+function teoremaDePitagoras(cateto1, cateto2){
+    const hipotenusa = Math.sqrt(cateto1**2 + cateto2**2)
+    return hipotenusa.toFixed(2)
+}
+
+console.log(teoremaDePitagoras(4,7))
