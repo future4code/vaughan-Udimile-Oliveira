@@ -51,3 +51,52 @@ console.log("O segundo número é divisível pelo primeiro? ",(Number(num2)%Numb
 
 //Desafio
 
+//1.
+//a) 
+// let kelvin = (77-32)*(5/9) + 273.15
+// console.log(`${kelvin}K`)
+//b)
+// let fahrenheit = 80*(9/5)+32
+// console.log(`${fahrenheit}°F`)
+//c) 
+// let celsiusToF = 30*(9/5)+32
+// let celsiusToK = (celsiusToF-32)*(5/9) + 273.15
+// console.log(`${celsiusToF}°F, ${celsiusToK}K`)
+
+//d)
+// let celsius = Number(prompt("Digite a temperatura em celsius sem a unidade de medida."))
+// let celsiusToF = celsius*(9/5)+32
+// let celsiusToK = (celsiusToF-32)*(5/9) + 273.15
+// console.log(`${celsiusToF}°F, ${celsiusToK}K`)
+
+//2.
+//a)
+// let valorASerPago = 280*0.05
+// console.log(`O valor a ser pago é R$${valorASerPago}`)
+//b)
+// 
+
+//3.
+//a) libra * 0,454 = kg
+// let poundsToKilo = 20*0.454
+// console.log(`20lb equivalem a ${poundsToKilo}kg`)
+//b) onça / 3,527
+// let ozToKilo = (10.5/3.527).toFixed(2)
+// console.log(`10.5oz equivalem a ${ozToKilo} kg`)
+//c) milhas * 1609,34
+// let miToM = 100*1609.34
+// console.log(`100mi equivalem a ${miToM} m`)
+//d)
+// let feetToM = (50/3.281).toFixed(2)
+// console.log(`50ft equivalem a ${feetToM} m`)
+//e)
+// let galToLi = (103.56*3.785).toFixed(2)
+// console.log(`103.56gal equivalem a ${galToLi} L`)
+//f)
+// let xicToLi = 450*0.24
+// console.log(`450 xic equivalem a ${xicToLi} l`)
+//g)
+// let milhas = Number(prompt("Digite o valor em Milhas sem a unidade de medida."))
+// let miToM = milhas*1609.34
+// console.log(`${milhas}mi equivalem a ${miToM}m`)
+
