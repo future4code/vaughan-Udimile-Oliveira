@@ -42,3 +42,14 @@ let tarefaRealizada = prompt("Digite o índice das suas tarefas realizadas: 0, 1
 listaDeTarefas.splice(tarefaRealizada, 1)
 console.log(listaDeTarefas)*/
 
+
+//desafio/
+//1.
+const string = "Gostaria que essa frase fosse um array"
+const stringToArray = string.split(" ");
+console.log(stringToArray)
+//2.
+const array = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
+console.log(`Abacaxi está no índice ${array.indexOf("Abacaxi")} e ${array.length} é o tamanho do Array`)
+
+
