@@ -74,7 +74,8 @@ console.log("O segundo número é divisível pelo primeiro? ",(Number(num2)%Numb
 // let valorASerPago = 280*0.05
 // console.log(`O valor a ser pago é R$${valorASerPago}`)
 //b)
-// 
+// let valorASerPagoComDesconto = valorASerPago - ((280*0.05)*0.15)
+// console.log(`O valor a ser pago é R$${valorASerPagoComDesconto}`)
 
 //3.
 //a) libra * 0,454 = kg
