@@ -45,15 +45,92 @@
  */
 
 // 1.
- let quantidadeDePet = Number(prompt("Quantos animais de estimação você tem?"))
- const arraysDeNomesDePet = []
- if (quantidadeDePet === 0){
-    console.log("Que pena! Você pode adotar um pet!")
- }else{
-    let i = 0
-    while (i < quantidadeDePet){
-        arraysDeNomesDePet.push(prompt("Qual o nome do seu pet?"))
-        i++
-     }
-     } console.log(arraysDeNomesDePet)
+//  let quantidadeDePet = Number(prompt("Quantos animais de estimação você tem?"))
+//  const arraysDeNomesDePet = []
+//  if (quantidadeDePet === 0){
+//     console.log("Que pena! Você pode adotar um pet!")
+//  }else{
+//     let i = 0
+//     while (i < quantidadeDePet){
+//         arraysDeNomesDePet.push(prompt("Qual o nome do seu pet?"))
+//         i++
+//      }
+//      } console.log(arraysDeNomesDePet)
+//  2.
+// const arrayOriginal = [10, 30, 12, 16, 25, 70, 55, 21]
+// let tamanhoDoArray = arrayOriginal.length
+// a)
+// function imprimeCadaValorDoArrayOriginal(arrayOriginal){
+//   for(let i = 0; i <= tamanhoDoArray-1; i++){
+//     console.log(arrayOriginal[i])
+//   }
+// }
+// imprimeCadaValorDoArrayOriginal(arrayOriginal)
+// // b)
+// function imprimeCadaValorDoArrayOriginalDividido(arrayOriginal){
+//   for(let i = 0; i <= tamanhoDoArray-1; i++){
+//     console.log(arrayOriginal[i]/10)
+//   }
+// }
+// imprimeCadaValorDoArrayOriginalDividido(arrayOriginal)
+
+// //c)
+// function imprimeNumerosPares(arrayOriginal){
+// let arrayDeNumerosPares = [] 
+//  for (let i = 0; i <= tamanhoDoArray-1 ; i++){
+//    if(arrayOriginal[i] % 2 === 0){
+//      arrayDeNumerosPares.push(arrayOriginal[i])
+//    }
+//  }
+// console.log(arrayDeNumerosPares)
+// }
+// imprimeNumerosPares(arrayOriginal)
+
+// d) 
+// function imprimeStrings(arrayOriginal){
+//   let arrayDeStrings = []
+//   for (let i = 0; i <= tamanhoDoArray-1; i++){
+//     arrayDeStrings.push(`O elemento do índex ${i} é: ${arrayOriginal[i]}`)
+//   }
+//   console.log(arrayDeStrings)
+// }
+// imprimeStrings(arrayOriginal)
+
+// e)
+// let valorMaximo = -Infinity
+// let valorMinimo = Infinity
+
+// function maiorNumero(arrayOriginal) {
+//   for(let i = 0; i <= tamanhoDoArray-1; i++){
+//     if(arrayOriginal[i]>= valorMaximo){
+//        valorMaximo = arrayOriginal[i]
+//     }
+//     if(arrayOriginal[i]< valorMinimo){
+//       valorMinimo = arrayOriginal[i]
+//    }
+//   }
+//   console.log(`O maior valor é ${valorMaximo} e o menor é ${valorMinimo}`)
+  
+// }
+// maiorNumero(arrayOriginal)
+
+//Desafio
+//1 e 2
+console.log("Vamos Jogar")
+// let primeiroNumero = Number(prompt("Primeiro jogador, qual é o seu número, de 1 a 100"))
+let primeiroNumero = Math.floor(Math.random()*100)
+let chute = Number(prompt("Qual o seu chute. De 0 a 100"))
+let i = 1
+while(primeiroNumero !== chute){
+  console.log(`O número chutado foi: ${chute}`)
+  if(primeiroNumero>chute){
+    console.log("ERRRRRRRROU, é maior")
+  } else if(primeiroNumero<chute){
+    console.log("ERRRRRRRROU, é menor")
+  }
+  i++
+  chute = Number(prompt("Qual o seu chute. De 0 a 100"))
+}
+console.log("Acertou!")
+console.log(`O número de tentativas foi: ${i}`)
  
