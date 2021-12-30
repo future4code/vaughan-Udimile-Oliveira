@@ -32,7 +32,7 @@
     ```
     
     a) O que vai ser impresso no console?
-    Amanda Rangel, Laís Petra, Leticia Chijo
+    [Amanda Rangel, Laís Petra, Leticia Chijo]
     
 3. Leia o código abaixo
     
@@ -54,7 +54,7 @@
     Amanda rangel, lais petra
     */
 
-    // Exercicio de escrita de código
+    // Exercício de escrita de código
     //1
     const pets = [
         { nome: "Lupin", raca: "Salsicha"},

@@ -134,3 +134,9 @@ while(primeiroNumero !== chute){
 console.log("Acertou!")
 console.log(`O número de tentativas foi: ${i}`)
  
+ 
+ 
+ 
+ 
+ 
+'tentando fazer o push'
