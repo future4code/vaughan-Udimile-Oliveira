@@ -68,23 +68,51 @@ return objeto
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+   const novoArray = []
+   let i = 0
+   while( novoArray.length < n){
+       if(i % 2 === 0){
+           novoArray.push(i)
+       }
+       i++
+   }
+   return novoArray
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
-}
+ let triangulo
+    if(ladoA === ladoB && ladoB === ladoC){
+     triangulo = "Equilátero"    
+ } else if(ladoA !== ladoB && ladoB!== ladoC && ladoC !== ladoA){
+    triangulo = "Escaleno" 
+ } else{
+     triangulo = "Isósceles"
+ }
+ return triangulo
+} 
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+    array = array.sort(function compararNumeros(a, b) {
+        return b - a;
+      }) 
+      novoArray = [array[1], array[array.length -2 ]]
+    return novoArray
+
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-
-    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
+    let atoresComEspaco = ""
+    for(let i=0; i < filme.atores.length; i++){
+        if(i === filme.atores.length - 1){
+            atoresComEspaco += filme.atores[i]
+        } else{
+            atoresComEspaco += filme.atores[i] + ", "
+        }
+    }
+    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${atoresComEspaco}.`
 
 }
 
@@ -99,16 +127,24 @@ function retornaPessoaAnonimizada(pessoa) {
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-    pessoa = pessoa.map(altura >= 1.5 || idade >= 14 || idade < 60)
-            return pessoa
+    let autorizadas = []
+    for(const pessoa of pessoas){
+        if(pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60){
+            autorizadas.push(pessoa)
+        }
         
-    
-        
+    } return autorizadas
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+    const naoAutorizadas = []
+    for(let pessoa of pessoas){
+        if(pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60){
+            naoAutorizadas.push(pessoa)
+        }
+        
+    } return naoAutorizadas
 }
 
 // EXERCÍCIO 14
