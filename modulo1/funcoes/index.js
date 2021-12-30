@@ -108,3 +108,5 @@ function teoremaDePitagoras(cateto1, cateto2){
 }
 
 console.log(teoremaDePitagoras(4,7))
+
+"Udimile"
