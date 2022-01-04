@@ -58,40 +58,103 @@ b) O valor que foi impresso no console foi undefined pq o valor não foi definid
 */
 //Exercicio de escrita de código
 //1.
-const pessoa = {
-    nome: "Udimile",
-    apelidos: ["Mile", "Udi", "UD"]
-}
-function frase(pessoa){
-    return `Eu sou ${pessoa.nome}, mas pode me chamar de: ${pessoa.apelidos[0]}, ${pessoa.apelidos[1]} ou ${pessoa.apelidos[2]}`
-}
-console.log(frase(pessoa))  
+// const pessoa = {
+//     nome: "Udimile",
+//     apelidos: ["Mile", "Udi", "UD"]
+// }
+// function frase(pessoa){
+//     return `Eu sou ${pessoa.nome}, mas pode me chamar de: ${pessoa.apelidos[0]}, ${pessoa.apelidos[1]} ou ${pessoa.apelidos[2]}`
+// }
+// console.log(frase(pessoa))  
 
-const pessoa2 = {
-    ...pessoa,
-    apelidos: [
-        "Milinha", "Mimi", "Milemole"
-    ]
-}
-console.log(frase(pessoa2))
+// const pessoa2 = {
+//     ...pessoa,
+//     apelidos: [
+//         "Milinha", "Mimi", "Milemole"
+//     ]
+// }
+// console.log(frase(pessoa2))
+//2. 
+// const pessoa3 = {
+//     nome: "Ana Lúcia",
+//     idade: 54,
+//     profissao: "empresária" 
+// }
+// function informacoesPessoa3(pessoa3){ 
+//     return[
+//         pessoa3.nome,
+//         pessoa3.nome.length,
+//         pessoa3.idade,
+//         pessoa3.profissao,
+//         pessoa3.profissao.length
+//     ]
+
+// }
+// console.log(informacoesPessoa3(pessoa3))
+//3.
+// const carrinho = []
+// const fruta1 = {
+//     nome :"goiaba",
+//     disponivel : true
+// }
+// const fruta2 = {
+//     nome : "uva",
+//     disponivel : true
+// }
+// const fruta3 = {
+//     nome : "banana",
+//     disponivel : false
+
+// }
+
+// function colocandoNoCarrinho(fruta){
+//     carrinho.push(fruta)
+    
+// }
+// colocandoNoCarrinho(fruta1)
+// colocandoNoCarrinho(fruta2)
+// colocandoNoCarrinho(fruta3)
+
+// console.log(carrinho)
+
+
+//Desafio
+//1.  
+// function dadosDoUsuario (){
+// const pessoa = {
+// 	nome: prompt("Qual o seu nome?"),
+// 	idade: Number(prompt("Qual a sua idade?")),
+// 	profissao: prompt("Qual sua profissão?")
+// }
+// 	console.log(pessoa)
+// 	console.log(typeof pessoa)
+// }
+// dadosDoUsuario()
+
 //2.
-const carrinho = []
-const fruta1 = {
-    nome :"goiaba",
-    disponivel : true
-}
-const fruta2 = {
-    nome : "uva",
-    disponivel : true
-}
-const fruta3 = {
-    nome : "banana",
-    disponivel : false
+//  function filmes(){
+// 	 const filme1 = {
+// 		 anoDeLancamento: 2004,
+// 		 nome: "De repente 30"
+// 	 }
+// 	 const filme2 = {
+// 		 anoDeLancamento: 2010,
+// 		 nome: "Amor e outras drogas"
+// 	 }
+// 	 const antesDoSegundo = filme1.anoDeLancamento > filme2.anoDeLancamento
+// 	 const mesmoAno = filme1.anoDeLancamento == filme2.anoDeLancamento
 
-}
+// 	 console.log(`O primeiro filme foi lançado antes do segundo? ${antesDoSegundo}`)
+// 	 console.log(`O primeiro filme foi lançado no mesmo ano que o segundo? ${mesmoAno}`)
+//  }
 
-function colocandoNoCarrinho(carrinho){
-    carrinho.push(fruta1.nome, fruta2.nome, fruta3.nome)
-    return carrinho
-}
-console.log(colocandoNoCarrinho(carrinho))
+//  filmes()
+
+//3.
+// function controleDeEstoque(fruta){
+// 	return {...fruta, disponivel: !fruta.disponivel}
+
+// }
+// console.log(controleDeEstoque(fruta1))
+
+"Udimile"
