@@ -140,15 +140,27 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+    contas.forEach((conta) => {
+        let totalDeCompras = 0;
+            conta.compras.forEach((valor) => {
+                 totalDeCompras += valor;
 
+        });
+        conta.saldoTotal -= totalDeCompras;
+                conta.compras = []
+      });
+      return contas;
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  return consultas.sort(function (a, b) {
+	
+	return (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0);
+ 
+});
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
 }
