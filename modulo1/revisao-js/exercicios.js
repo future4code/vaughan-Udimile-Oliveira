@@ -17,6 +17,7 @@ function retornaArrayInvertido(array) {
 function retornaArrayOrdenado(array) {
     
     return array.sort(function compararNumeros(a, b) {
+        console.log(array.sort())
         return a - b;
       })
 
