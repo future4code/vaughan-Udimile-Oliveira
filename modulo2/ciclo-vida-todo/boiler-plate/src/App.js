@@ -34,25 +34,36 @@ class App extends React.Component {
   };
 
   onChangeInput = (event) => {
-    this.setState({ textoNovaTarefa: event.target.value })
+    this.setState({ inputValue: event.target.value })
   }
 
   criaTarefa = () => {
     const novaTarefa = {
       id: Date.now(),
-      texto: this.state.textoNovaTarefa,
+      texto: this.state.inputValue,
       completa: false
     }
     const copiaListaDeTarefa = [...this.state.tarefas, novaTarefa]
-    this.setState({tarefas: copiaListaDeTarefa})
+    this.setState({ tarefas: copiaListaDeTarefa })
   }
 
   selectTarefa = (id) => {
-
+    const copiaListaDeTarefa = this.state.tarefas.map((value) => {
+      if (id === value.id) {
+        const novaTarefa = {
+          ...value,
+          completa: !value.completa
+        }
+        return novaTarefa
+      } else {
+        return value
+      }
+    })
+      this.setState({ tarefas: copiaListaDeTarefa})
   }
 
   onChangeFilter = (event) => {
-
+    this.setState({ filter: event.target.value })
   }
 
   render() {
