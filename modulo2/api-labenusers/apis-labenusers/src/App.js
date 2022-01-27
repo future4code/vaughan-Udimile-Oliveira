@@ -1,116 +1,84 @@
 import axios from "axios"
 import React from "react";
-import styled from "styled-components"
 import Create from "./components/Create"
+import Details from "./components/Details";
 import List from "./components/List"
-import {Container} from "./style";
+import styled from "styled-components";
+
+
+const Container = styled.h1`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+`
+const CardContainer = styled.div`
+  border: 1px solid;
+  justify-content: center;
+  display: grid; 
+  align-items: center;
+  margin: 0;
+  padding: 0;
+`
 
 export default class App extends React.Component {
 
 
   state = {
-    users: [],
-    inputUser: "",
-    inputEmail: "",
-    showUsers: false
+    showUsers: "createUser"
   };
-
-
-
-  createUser = () => {
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-    const body = {
-      name: this.state.inputUser,
-      email: this.state.inputEmail
-    };
-    const config = { headers: { Authorization: "Udimile-Oliveira-Vaughan" } }
-
-    axios.post(url, body, config)
-      .then(response => {
-        alert("Usuário criado com sucesso!")
-        this.setState({ inputUser: "", inputEmail: "" })
-        this.getAllUsers()
-      })
-      .catch(error => { alert(`Erro, algo de errado não está certo!`) })
-  };
-
-  getAllUsers = () => {
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-    const config = { headers: { Authorization: "Udimile-Oliveira-Vaughan" } }
-
-    axios.get(url, config)
-      .then(response => {
-        this.setState({ users: response.data})
-        this.getAllUsers()
-      })
-      .catch(error => { alert(`Erro, algo de errado não está certo!`) })
-  }
-
-  deleteUsers = (id) => {
-    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`;
-    const config = { headers: { Authorization: "Udimile-Oliveira-Vaughan" } }
-
-    axios.delete(url, config)
-      .then(response => {alert("Usuário deletado com sucesso!")
-    }
-      )
-      .catch(error => { alert(`Erro, algo de errado não está certo!`) })
-  }
-
-  updateUser = (event) => {
-    this.setState({
-      inputUser: event.target.value
-    })
-  };
-
-  updateEmail = (event) => {
-    this.setState({
-      inputEmail: event.target.value
-    })
-  };
-  renderList = () => {
-    this.setState({ showUsers: true })
-  }
-  renderCreate = () => {
-    this.setState({ showUsers: false })
-  }
-
 
   renderAll = () => {
     switch (this.state.showUsers) {
-      case false:
+      case "createUser":
+
         return <Create
-          createUser={this.createUser}
-          inputEmail={this.state.inputEmail}
-          inputUser={this.state.inputUser}
-          updateEmail={this.updateEmail}
-          updateUser={this.updateUser}
-          renderList={this.renderList} />
-      case true:
+        renderList={this.renderList} />
+
+      case "listUser":
+
         return <List
-          getAllUsers={this.getAllUsers}
-          deleteUsers={this.deleteUsers}
-          users={this.state.users}
           renderCreate={this.renderCreate}
         />
+
+      case "userDetails":
+      
+       return <Details
+        renderList = {this.renderDetails}
+       />
+
       default:
         break
-
     }
   }
+  
+ 
+  
+  
+  renderList = () => {
+    this.setState({ showUsers: "listUser"})
+  }
+  renderCreate = () => {
+    this.setState({ showUsers: "createUser" })
+  }
+  renderDetails = () => {
+    this.setState({ showUsers: "userDetails" })
+  };
 
+
+ 
   render() {
     return (
 
 
-      <Container>
-        <h1>LabenUsers</h1>
+      <CardContainer>
+        <Container>LabenUsers</Container>
         <this.renderAll />
+      </CardContainer>
 
+    );
 
-      </Container>
-
-    )
-
-  }
+  };
 }
