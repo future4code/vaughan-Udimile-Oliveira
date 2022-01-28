@@ -1,20 +1,28 @@
 import React from "react";
+import CreatePlaylist from "./components/CreatePlaylist";
+import GetAllPlayList from "./components/GetAllPlaylist";
 
-export default class Aoo extends React.Component{
-  state = {
-    playlist = ""
+export default class App extends React.Component{
+  
+  state ={
+    screen: "create"
   }
 
-  createPlaylist = () => {
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-    const body = this.state.playlist
-    const config = {headers: {}}
-  }
+  // renderScreen = () => {
+  //   switch (this.state.screen) {
+  //     case "create":
+  //       return <createPlaylist/>
+  //     case "playlists":
+  //       return <GetAllPlayList/> 
+
+  //   }
+  // }
 
   render() {
     return(
       <div>
-        oi
+       <CreatePlaylist/>
+       <GetAllPlayList/>
       </div>
     )
   }
