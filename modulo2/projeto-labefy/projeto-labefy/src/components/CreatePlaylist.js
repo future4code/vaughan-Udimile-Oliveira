@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+const config = { headers: { Authorization: "Udimile-Oliveira-Vaughan" } }
 
 export default class createPlaylist extends React.Component {
   state = {
@@ -10,8 +11,8 @@ export default class createPlaylist extends React.Component {
 
   createPlaylist = () => {
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-    const body = {name: this.state.inputPlaylist}
-    const config = { headers: { Authorization: "Udimile-Oliveira-Vaughan" } }
+    const body = { name: this.state.inputPlaylist }
+
 
     axios.post(url, body, config)
       .then(response => {
@@ -19,7 +20,7 @@ export default class createPlaylist extends React.Component {
         this.setState({ inputPlaylist: "" })
 
       })
-      .catch(err => { alert(err.response.data.message) })
+      .catch(error => { alert(error.response.data.message) })
   }
 
   updatePlaylist = (event) => {
