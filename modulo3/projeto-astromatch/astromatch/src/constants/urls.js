@@ -1,1 +1,1 @@
-export const BaseUrl = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/Udimile-Oliveira/"
+export const BaseUrl = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/Udimile/"
