@@ -10,20 +10,18 @@ const CardContainer = styled.div`
     margin: 1vh;
     padding: 1vh;
 
+
     img{
-        /* width: 20%; */
-        height:20%;
+        
+        max-height:15%;
+        min-width: 15%;
         
     }
-    div{
-        button{
-            margin: 1vw;
-        
-        }
-    }
-    
 
-
+`
+const Button = styled.div`
+        justify-content: space-between;
+        display: flex;
 `
 
 
@@ -68,10 +66,10 @@ export default function ChooseScreen() {
                     <img src={profile.photo} alt={profile.name} />
                     <p>{profile.name}, {profile.age}</p>
                     <p>{profile.bio}</p>
-                    <div>
+                    <Button>
                         <button onClick={choosePerson}>Like</button>
                         <button onClick={getProfileToChoose}>X</button>
-                    </div>
+                    </Button>
                 </CardContainer>) : (<p>Carregando...</p>)}
         </div>
 

@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react";
-import AppBar from "./components/AppBar";
+import BarApp from "./components/BarApp";
 import ResetMatch from "./components/ResetMatch";
 import ChooseScreen from "./pages/ChooseScreen";
 import MatchScreen from "./pages/MatchScreen";
 import styled from "styled-components";
+import '@fontsource/roboto/300.css'
 
 const CardContainer = styled.div`
     border: 1px solid black;
     display: flex;
     width: 20%;
     flex-direction: column;
-    margin: 2vh;
-    padding: 2vh;
+    border-radius: 5%;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 
-
+    `
+const Container = styled.div`
+    display: grid;
+    justify-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     `
 
 export default function App() {
 
   const [currentScreen, setCurrentScreen] = useState("choose")
 
-  useEffect (() => {renderScreen()}, [])
+  useEffect(() => { renderScreen() }, [])
 
   const renderScreen = () => {
     switch (currentScreen) {
@@ -40,14 +47,14 @@ export default function App() {
   }
 
   return (
-    <div>
+    <Container>
       <CardContainer>
-      <AppBar changeScreen={changeScreen} />
-      {renderScreen()}
-     
+        <BarApp changeScreen={changeScreen} />
+        {renderScreen()}
+
       </CardContainer>
       <ResetMatch />
-    </div>
+    </Container>
   );
 }
 

@@ -4,14 +4,17 @@ import { BaseUrl } from "../constants/urls"
 import styled from "styled-components"
 
 const Imagem = styled.img`
-    width: 10%;
+    max-width: 20%;
+    max-height: 40px;
+    display: inline-table;
 `
 const CardContainer = styled.div`
     display: flex;
     border-bottom: 1px solid black;
-    margin: 2%;
-    padding: 2%;
     gap: 1%;
+    min-width: 50%;
+    align-items: center;
+    
 `
 
 export default function MatchScreen() {
@@ -37,7 +40,7 @@ export default function MatchScreen() {
                     <p>{person.name}</p>
                 </CardContainer>
                 
-            })}
+            })} 
         </div>
     )
 }
