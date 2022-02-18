@@ -1,25 +1,26 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export function usePostData(url, body) {
+export function useRequestData(url) {
     const [data, setData] = useState(undefined)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState("")
 
     useEffect(() => {
         setIsLoading(true)
-        axios.post(url, body)
+        axios.put(url)
             .then(res => {
-                setData(res.data)
+                // setData(res.data)
+                console.log(res.data)
                 setIsLoading(false)
             })
             .catch(err => {
                 console.log(err.response.data)
-                setError(err)
                 setIsLoading(false)
+                setError(err)
             })
 
-    }, [url, body])
+    }, [url])
 
     return [data, isLoading, error]
 }

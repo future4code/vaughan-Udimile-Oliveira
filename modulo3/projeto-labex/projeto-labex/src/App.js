@@ -1,10 +1,9 @@
 
+import {Router} from "./Router/Router" 
 
 function App() {
   return (
-    <div>
-      LabEx
-    </div>
+    <Router />
   );
 }
 
