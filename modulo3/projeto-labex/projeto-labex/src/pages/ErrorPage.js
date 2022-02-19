@@ -2,7 +2,7 @@ export default function ErrorPage () {
 
     return(
         <div> 
-            <p>ErrorPage</p>
+            <p>DEU ERRO! ATUALIZE!</p>
         </div>
     )
     

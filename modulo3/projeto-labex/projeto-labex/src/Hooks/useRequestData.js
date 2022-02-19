@@ -12,9 +12,9 @@ export function useRequestData(url) {
             .then(res => {
                 setData(res.data)
                 setIsLoading(false)
+                
             })
             .catch(err => {
-                console.log(err.response)
                 setIsLoading(false)
                 setError(err)
             })

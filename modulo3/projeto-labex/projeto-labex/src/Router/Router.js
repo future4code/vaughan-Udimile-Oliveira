@@ -15,21 +15,21 @@ export const Router = () => {
 
             <Routes>
 
-                <Route exact path={"/"} element={<HomePage />} />
+                <Route path={"/"} element={<HomePage />} />
 
-                <Route exact path={"/trips/list"} element={<ListTripsPage/>} />
+                <Route path={"/trips/list"} element={<ListTripsPage/>} />
 
-                <Route exact path={"/trips/application"} element={<AppFormPage />} />
+                <Route path={"/trips/application"} element={<AppFormPage />} />
 
-                <Route exact path={"/login"} element={<LoginPage/>} />
+                <Route path={"/login"} element={<LoginPage/>} />
 
-                <Route exact path={"/admin/trips/list"} element={<AdminHomePage />} />
+                <Route path={"/admin/trips/list"} element={<AdminHomePage />} />
 
-                <Route exact path={"/admin/trips/create"} element={<CreateTripPage />} />
+                <Route path={"/admin/trips/create"} element={<CreateTripPage />} />
 
-                <Route exact path={"/admin/trips/:id"} element={<TripDetailsPage/>} />
+                <Route path={"/admin/trips/:id"} element={<TripDetailsPage/>} />
 
-                <Route element={< ErrorPage/>} />
+                <Route path="*" element={< ErrorPage/>} />
 
             </Routes>
 

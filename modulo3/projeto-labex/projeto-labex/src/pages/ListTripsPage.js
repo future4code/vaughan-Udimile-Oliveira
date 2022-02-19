@@ -1,6 +1,6 @@
 import { useRequestData } from "../Hooks/useRequestData"
 import { url_BASE } from "../constants/url"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export default function ListTripsPage() {
 
@@ -32,14 +32,14 @@ export default function ListTripsPage() {
         <div>
             <div>
 
-                <button onClick={()=>handleClick()}>Voltar</button>
-                <button onClick={()=>{handleClickSignUp()}}>Inscrever-se</button>
-            
+                <button onClick={() => handleClick()}>Voltar</button>
+                <button onClick={() => { handleClickSignUp() }}>Inscrever-se</button>
+
             </div>
             <div>
 
                 {isLoadingTrips && <p>carregando...</p>}
-                {!isLoadingTrips && errorTrips && <p>Ocorreu um erro na requisição</p> }
+                {!isLoadingTrips && errorTrips && <p>Ocorreu um erro na requisição</p>}
                 {!isLoadingTrips && trips && tripsList}
                 {!isLoadingTrips && trips && trips.length === 0 && <p>Não há dados na requisição!</p>}
 

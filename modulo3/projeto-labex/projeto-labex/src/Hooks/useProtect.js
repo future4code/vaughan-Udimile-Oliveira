@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 export const useProtect = () => {
     const navigate = useNavigate()
 
-    useEffect(() => { 
+    useEffect(() => {
         const token = window.localStorage.getItem("token")
-        if(token === null) {
+        if (token === null) {
             navigate("../login", { state: true })
         }
     }, [navigate])
 
-    
+
 }
 
