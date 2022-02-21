@@ -2,12 +2,27 @@ import { useState } from "react"
 import { useProtect } from "../Hooks/useProtect"
 import axios from "axios"
 import { url_BASE } from "../constants/url"
-import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components'
+import Header from "../components/Header"
+
+
+const Container = styled.div`
+    display: grid;
+    justify-content: space-around;
+    margin-top: 5%;
+    text-align: center;
+form{
+    display: flex;
+    flex-direction: column;
+    input{
+        margin: 2px;
+        width: 40vh;
+    }
+}
+`
 
 export default function CreateTripPage() {
     useProtect()
-
-    const navigate = useNavigate()
 
     const [form, setForm] = useState({ name: "", planet: "", date: "", description: "", durationInDays: "" })
 
@@ -34,25 +49,25 @@ export default function CreateTripPage() {
 
     }
 
-    const handleClick = () => {
-        navigate(-1)
-    }
 
     return (
-        <div>
+       <div>
+           <Header/>
+            <Container>
+                <h2>Criar viagem</h2>
             <form onSubmit={onSubmitTrip}>
                 <input
                     name="name"
-                    type={""}
                     placeholder="Nome"
                     value={form.name}
                     onChange={onChange}
+                    pattern={"^.{5,}"}
+                    title={"O nome deve ter no mínimo 5 letras"}
                     required
                 />
                 <input
                     placeholder="Planeta"
                     name="planet"
-                    type={""}
                     value={form.planet}
                     onChange={onChange}
                     required
@@ -63,14 +78,16 @@ export default function CreateTripPage() {
                     name="date"
                     value={form.date}
                     onChange={onChange}
+                    min={"2022-02-20"}
                     required
                 />
                 <input
                     placeholder="Descrição"
-                    name="description"
-                    type={""}
+                    name="description" 
                     value={form.description}
                     onChange={onChange}
+                    pattern={"^.{30,}"}
+                    title={"A descrição deve ter no mínimo 30 letras"}
                     required
                 />
                 <input
@@ -79,12 +96,15 @@ export default function CreateTripPage() {
                     type={"number"}
                     value={form.durationInDays}
                     onChange={onChange}
+                    min={50}
+                    title={"A quantidade de dias mínima é 50 dias"}
                     required
                 />
                 <button>Criar</button>
             </form>
-            <button onClick={() => handleClick()}>voltar</button>
-        </div>
+
+        </Container>
+       </div>
     )
 
 }

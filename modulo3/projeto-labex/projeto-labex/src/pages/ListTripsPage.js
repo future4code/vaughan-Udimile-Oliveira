@@ -1,6 +1,16 @@
 import { useRequestData } from "../Hooks/useRequestData"
 import { url_BASE } from "../constants/url"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
+import styled from 'styled-components'
+import Header from "../components/Header"
+
+
+const Container = styled.div`
+    display: grid;
+    justify-content: space-around;
+    margin-top: 5%;
+    text-align: center;
+    `
 
 export default function ListTripsPage() {
 
@@ -20,9 +30,6 @@ export default function ListTripsPage() {
     })
     const navigate = useNavigate()
 
-    const handleClick = () => {
-        navigate(-1)
-    }
     const handleClickSignUp = () => {
         navigate("../trips/application", { state: true })
     }
@@ -30,20 +37,22 @@ export default function ListTripsPage() {
 
     return (
         <div>
-            <div>
+            <Header/>
+            <Container>
+                <div>
 
-                <button onClick={() => handleClick()}>Voltar</button>
-                <button onClick={() => { handleClickSignUp() }}>Inscrever-se</button>
+                    <button onClick={() => { handleClickSignUp() }}>Inscrever-se</button>
 
-            </div>
-            <div>
+                </div>
+                <div>
 
-                {isLoadingTrips && <p>carregando...</p>}
-                {!isLoadingTrips && errorTrips && <p>Ocorreu um erro na requisição</p>}
-                {!isLoadingTrips && trips && tripsList}
-                {!isLoadingTrips && trips && trips.length === 0 && <p>Não há dados na requisição!</p>}
+                    {isLoadingTrips && <p>carregando...</p>}
+                    {!isLoadingTrips && errorTrips && <p>Ocorreu um erro na requisição</p>}
+                    {!isLoadingTrips && trips && tripsList}
+                    {!isLoadingTrips && trips && trips.length === 0 && <p>Não há dados na requisição!</p>}
 
-            </div>
+                </div>
+            </Container>
         </div>
 
     )

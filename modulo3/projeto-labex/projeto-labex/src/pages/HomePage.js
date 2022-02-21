@@ -1,4 +1,18 @@
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+    display: grid;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 8%;
+    button{
+        margin: 5px;
+    }
+
+`
 
 export default function HomePage() {
 
@@ -13,9 +27,15 @@ export default function HomePage() {
 
     return (
         <div>
-            <p>HomePage</p>
-            <button onClick={() => handleClickList()}> ver viagem </button>
-            <button onClick={() => handleClickAdmin()}> área admin </button>
+            <Header />
+            <Container>
+                <h2>Página Inicial</h2>
+                <div>
+                    <button onClick={() => handleClickList()}>Ver Viagens</button>
+                    <button onClick={() => handleClickAdmin()}>Área Administrativa</button>
+                </div>
+
+            </Container>
         </div>
     )
 
