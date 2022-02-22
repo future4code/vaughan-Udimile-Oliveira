@@ -20,9 +20,9 @@ export const SignUpPage = () => {
         }
         axios.post(`${urlBase}/users/signup`, body)
             .then(res => {
-                // window.localStorage.setItem('token', res.data.token)
-                console.log(res.data)
-                navigate('/login')
+                window.localStorage.setItem('token', res.data.token)
+                navigate('/')
+
             })
             .catch(err => console.log(err.response))
     }
@@ -39,7 +39,7 @@ export const SignUpPage = () => {
     return (
         <div>
             <form onSubmit={postSignUp}>
-            <input
+                <input
                     placeholder="Nome de usuário"
                     value={username}
                     onChange={onChangeUsername}
@@ -59,7 +59,7 @@ export const SignUpPage = () => {
                     onChange={onChangePassword}
                     required
                 />
-               
+
                 <button>Cadastrar</button>
             </form>
         </div>
