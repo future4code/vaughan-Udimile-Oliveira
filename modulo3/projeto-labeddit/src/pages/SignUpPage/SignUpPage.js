@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
-import { urlBase } from "../constants/urlBase";
+import { urlBase } from "../../constants/urlBase";
 import axios from 'axios'
 
 
@@ -24,7 +24,7 @@ export const SignUpPage = () => {
                 navigate('/')
 
             })
-            .catch(err => console.log(err.response))
+            .catch(err => alert(err.response.data))
     }
     const onChangeEmail = (e) => {
         setEmail(e.target.value)

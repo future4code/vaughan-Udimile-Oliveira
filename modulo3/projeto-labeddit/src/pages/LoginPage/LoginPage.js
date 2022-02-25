@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
-import { urlBase } from "../constants/urlBase";
+import { urlBase } from "../../constants/urlBase";
 import axios from 'axios'
+import Button from '@mui/material/Button'
+import { goToFeedPage, goToSignUp } from "../../Router/coordinator";
+import { StyledLogin } from "./styled";
 
 
 export const LoginPage = () => {
@@ -19,9 +22,9 @@ export const LoginPage = () => {
         axios.post(`${urlBase}/users/login`, body)
             .then(res => {
                 window.localStorage.setItem('token', res.data.token)
-                navigate('/')
+                goToFeedPage(navigate)
             })
-            .catch(err => console.log(err.response))
+            .catch(err => alert(err.response.data))
     }
     const onChangeEmail = (e) => {
         setEmail(e.target.value)
@@ -29,12 +32,10 @@ export const LoginPage = () => {
     const onChangePassword = (e) => {
         setPassword(e.target.value)
     }
-    const onClickSignUp = () => {
-        navigate('/signup')
-    }
+    
 
     return (
-        <div>
+        <StyledLogin>
             <form onSubmit={postLogin}>
                 <input
                     placeholder="E-mail"
@@ -50,9 +51,9 @@ export const LoginPage = () => {
                     onChange={onChangePassword}
                     required
                 />
-                <button>Entrar</button>
+                <Button variant="contained" color={"primary"}>Entrar</Button>
             </form>
-            <button onClick={onClickSignUp}>Cadastrar-se</button>
-        </div>
+            <Button variant="contained" onClick={()=>goToSignUp(navigate)}>Cadastrar-se</Button>
+        </StyledLogin>
     )
 }
