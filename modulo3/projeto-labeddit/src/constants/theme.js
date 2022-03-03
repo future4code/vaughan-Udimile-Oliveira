@@ -1,11 +1,11 @@
 import { createTheme } from '@mui/material/styles';
-import { primaryColor, neutralColor } from './colors';
+import { primaryColor, neutralColor, secondaryColor } from './colors';
 
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: primaryColor,
+      main: secondaryColor,
 
     },
     text: {

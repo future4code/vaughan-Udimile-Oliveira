@@ -1,18 +1,16 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { urlBase } from "../../constants/urlBase"
-import { useProtect } from "../../Hooks/useProtect"
-import { StyledCard, StyledDivFeed } from "./styled"
+import useProtect  from "../../Hooks/useProtect"
+import { StyledCard, StyledCardMui, StyledDivFeed } from "./styled"
 import moment from "moment";
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material"
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 export const FeedPage = () => {
-
     useProtect()
 
     const [posts, setPosts] = useState(undefined)
@@ -38,7 +36,7 @@ export const FeedPage = () => {
     }
 
     const feedList = posts && posts.map(post => {
-        return <Card sx={{ maxWidth: 600, minWidth: 600, minHeight: 100 }} key={post.id}>
+        return <StyledCardMui sx={{ maxWidth: 600, minWidth: 600, minHeight: 100 }} key={post.id}>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         postado por <b>{post.username}</b> há {moment(post.createdAt).startOf('hora').fromNow()}
@@ -50,7 +48,7 @@ export const FeedPage = () => {
                         {post.body}
                     </Typography>
                 </CardContent>
-            </Card>
+            </StyledCardMui>
 
     })
 
@@ -86,6 +84,7 @@ export const FeedPage = () => {
                     placeholder="Placeholder"
                     multiline
                     variant="standard"
+                    
                 />
                 <TextField
                     id="standard-multiline-static"

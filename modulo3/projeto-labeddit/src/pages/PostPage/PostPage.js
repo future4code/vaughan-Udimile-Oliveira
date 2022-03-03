@@ -1,4 +1,4 @@
-import { useProtect } from "../../Hooks/useProtect"
+import  useProtect  from "../../Hooks/useProtect"
 
 
 export const PostPage = () => {
