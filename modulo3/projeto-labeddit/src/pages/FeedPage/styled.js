@@ -6,7 +6,6 @@ export const StyledDivFeed = Styled.div`
     flex-direction: column;
     align-items: center;
     word-break: break-all;
-    margin: 3%
 
 `
 export const StyledCard = Styled.div`
@@ -16,5 +15,8 @@ export const StyledCard = Styled.div`
 
 `
 export const StyledCardMui = Styled(Card)`
-
+display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    
 `

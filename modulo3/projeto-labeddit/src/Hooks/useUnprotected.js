@@ -1,17 +1,18 @@
 import { useEffect } from "react"
 import { useNavigate } from 'react-router-dom';
-import { goToLogin } from "../Router/coordinator";
+import { goToFeedPage} from "../Router/coordinator";
 
-const useProtect = () => {
+const useUnprotected = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
         const token = window.localStorage.getItem("token")
-        if (!token) {
-            goToLogin(navigate)
+        if (token) {
+           goToFeedPage(navigate)
         }
     }, [navigate])
 
 
-} 
-export default useProtect
+}
+ 
+export default useUnprotected 
