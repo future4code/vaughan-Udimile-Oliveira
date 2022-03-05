@@ -61,7 +61,7 @@ export const LoginPage = ({setRightButtonText}) => {
                     onClick={() => goToSignUp(navigate)}
                     fullWidth
                 >
-                   Não Possui conta? Cadastrar-se
+                   Não Possui conta? Cadastre-se
                 </Button>
             </ButtonSignUpContainer>
 

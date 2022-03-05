@@ -15,8 +15,10 @@ export const StyledCard = Styled.div`
 
 `
 export const StyledCardMui = Styled(Card)`
-display: flex;
+    display: flex;
     flex-direction: column;
+    align-items: center
     word-break: break-all;
-    
+    margin: 0.5%
+
 `
