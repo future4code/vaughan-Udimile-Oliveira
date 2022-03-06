@@ -15,7 +15,7 @@ export const Router = ({ setRightButtonText }) => {
                 setRightButtonText={setRightButtonText} />} />
             <Route path='/signup' element={<SignUpPage
             setRightButtonText={setRightButtonText} />} />
-            <Route path='/post' element={<PostPage />} />
+            <Route path='/post/:id' element={<PostPage />} />
             <Route path='*' element={<ErrorPage />} />
         </Routes>
 

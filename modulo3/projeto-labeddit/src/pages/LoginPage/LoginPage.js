@@ -61,7 +61,11 @@ export const LoginPage = ({setRightButtonText}) => {
                     onClick={() => goToSignUp(navigate)}
                     fullWidth
                 >
+<<<<<<< HEAD
                    Não Possui conta? Cadastre-se
+=======
+                   Não Possui conta? Cadastrar-se
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
                 </Button>
             </ButtonSignUpContainer>
 
