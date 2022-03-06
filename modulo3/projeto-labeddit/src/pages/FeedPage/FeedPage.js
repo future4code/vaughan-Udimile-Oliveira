@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { urlBase } from "../../constants/urlBase"
 import useProtect  from "../../Hooks/useProtect"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { StyledCardMui, StyledDivFeed } from "./styled"
 import moment from "moment";
 import * as React from 'react';
@@ -19,6 +20,8 @@ export const FeedPage = () => {
     const [posts, setPosts] = useState(undefined)
 
 =======
+=======
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
 import { StyledCard, StyledCardMui, StyledDivFeed } from "./styled"
 import moment from "moment";
 import * as React from 'react';
@@ -33,6 +36,9 @@ export const FeedPage = () => {
     const [posts, setPosts] = useState(undefined)
     const [newPost, setNewPost] = useState()
     const [title, setTitle] = useState()
+<<<<<<< HEAD
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
+=======
 >>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
 
     const getPosts = () => {
@@ -55,8 +61,12 @@ export const FeedPage = () => {
 
     const feedList = posts && posts.map(post => {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return <StyledCardMui sx={{ maxWidth: 600, minWidth: 600, minHeight: 100 }} key={post.id} >
             <CardActionArea onClick={()=>goToPostDetail(navigate)}>
+=======
+        return <StyledCardMui sx={{ maxWidth: 600, minWidth: 600, minHeight: 100 }} key={post.id}>
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
 =======
         return <StyledCardMui sx={{ maxWidth: 600, minWidth: 600, minHeight: 100 }} key={post.id}>
 >>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
@@ -72,7 +82,10 @@ export const FeedPage = () => {
                     </Typography>
                 </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </CardActionArea>
+=======
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
 =======
 >>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
             </StyledCardMui>
@@ -82,12 +95,15 @@ export const FeedPage = () => {
     useEffect(() => { getPosts() }, [])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  
     return (
         <div>
             <StyledDivFeed>
                 <MakeAPost/>
 =======
+=======
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
     const createPost = () => {
         const token = window.localStorage.getItem("token")
 
@@ -131,6 +147,9 @@ export const FeedPage = () => {
                 <Button onClick={createPost}>Postar</Button>
             </StyledCard>
             <StyledDivFeed>
+<<<<<<< HEAD
+>>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
+=======
 >>>>>>> 68d596f0d01b01a8c06416552e858f6f0cadc169
                 {feedList}
             </StyledDivFeed>
