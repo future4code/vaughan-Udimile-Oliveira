@@ -1,3 +1,4 @@
+
 import express, { Express } from "express";
 import cors from 'cors'
 import { AddressInfo } from 'net'
@@ -7,6 +8,7 @@ const app: Express = express()
 
 app.use(express.json())
 app.use(cors())
+
 
 type extratos = {
     valor: number,
@@ -71,8 +73,11 @@ app.get("/user", (req, res) => {
     }
 })
 
+
+
 const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
+    if(server) {
+
         const address = server.address() as AddressInfo;
         console.log(`O servidor está funcionando no link: http://localhost:${address.port}/`)
     } else {
