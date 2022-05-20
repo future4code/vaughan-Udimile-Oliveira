@@ -4,6 +4,6 @@ export const goToHome = (navigate) => {
     navigate('/home')
 };
 
-// export const goToRestaurant = (navigate, id) => {
-//     navigate(`/restaurant/${id}`)
-// };
+export const goToDetails = (navigate, id) => {
+    navigate(`/details/${id}`)
+};
