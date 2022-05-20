@@ -14,7 +14,7 @@ const DetailPage = () => {
 
     const movieDetails = data && data.map(detail => {  
         return (
-            <DetailCard key={detail.id} detail={detail} />
+            <DetailCard key={detail.id} detail={detail} id={detail.id}/>
         )
     }
     
