@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BASE_URL } from '../../constants/URL';
 import useRequestData from '../../hooks/useRequestData';
 import { api_key } from '../../constants/apiKEY';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import Header from '../../components/Header/Header';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 export default function HomePage() {
     
 
-    // const navigate = useNavigate()
-    const [data, loading] = useRequestData({}, `${BASE_URL}popular?${api_key}&page=1` );
+    const [page, setPage] = useState(1)
+    const [data, loading] = useRequestData({}, `${BASE_URL}popular?${api_key}&page=${page}` );
 
- 
+    console.log(`${BASE_URL}popular?${api_key}&page=${page}`)
     const moviesList = data.results && data.results.map(movie => {
         
             return (
@@ -21,7 +23,9 @@ export default function HomePage() {
             );
         });
 
-    
+        const handleChange = (event, value) => {
+            setPage(value)
+          }
 
     return (
         
@@ -29,6 +33,10 @@ export default function HomePage() {
         <Header/>
     {moviesList}
     
+    <Stack spacing={2}>
+      <Pagination count={500} page={page} onChange={handleChange} sx={{ mb: '20px' }} />
+    </Stack>
+
     </div>
     )
 }
