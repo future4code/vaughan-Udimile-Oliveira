@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from '../../constants/URL';
 import { useParams } from "react-router-dom";
@@ -8,24 +8,23 @@ import DetailCard from "../../components/DetailCard/DetailCard";
 
 const DetailPage = () => {
     const pathParams = useParams();
-    const data = useRequestData([], `${BASE_URL}${pathParams.id}?${api_key}`)
+    const [data] = useRequestData([], `${BASE_URL}${pathParams.id}?${api_key}`)
 
- 
+    const detail = useMemo(() => {
+        return data
+    }, [data])
 
-    const movieDetails = data && data.map(detail => {  
-        return (
-            <DetailCard key={detail.id} detail={detail} id={detail.id}/>
-        )
-    }
-    
+    const movieDetails = detail && (
+        <DetailCard key={detail.id} detail={detail} id={detail.id} />
     )
 
+
     return (
-       
-       <div>
-            <Header/>
+
+        <div>
+            <Header />
             {movieDetails}
-       </div>
+        </div>
     );
 };
 

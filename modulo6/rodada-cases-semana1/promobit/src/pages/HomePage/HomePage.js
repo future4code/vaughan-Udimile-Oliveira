@@ -6,37 +6,37 @@ import MovieCard from '../../components/MovieCard/MovieCard';
 import Header from '../../components/Header/Header';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { CardContainer } from './styled';
 
 export default function HomePage() {
-    
+
 
     const [page, setPage] = useState(1)
-    const [data, loading] = useRequestData({}, `${BASE_URL}popular?${api_key}&page=${page}` );
+    const [data, loading] = useRequestData({}, `${BASE_URL}popular?${api_key}&page=${page}`);
 
-    console.log(`${BASE_URL}popular?${api_key}&page=${page}`)
     const moviesList = data.results && data.results.map(movie => {
-        
-            return (
-               
-                 <MovieCard key={movie.id} movie={movie}/>
-                
-            );
-        });
 
-        const handleChange = (event, value) => {
-            setPage(value)
-          }
+        return (
+
+            <MovieCard key={movie.id} movie={movie} loading={loading} />
+
+        );
+    });
+
+    const handleChange = (event, value) => {
+        setPage(value)
+    }
 
     return (
-        
-    <div>
-        <Header/>
-    {moviesList}
-    
-    <Stack spacing={2}>
-      <Pagination count={500} page={page} onChange={handleChange} sx={{ mb: '20px' }} />
-    </Stack>
 
-    </div>
+        <div>
+            <Header />
+            <CardContainer>
+            {moviesList}
+            </CardContainer>
+            <Stack spacing={2} display='flex' alignItems={'center'}>
+                <Pagination count={500} page={page} onChange={handleChange} sx={{ mb: '20px' }} />
+            </Stack>
+        </div>
     )
 }

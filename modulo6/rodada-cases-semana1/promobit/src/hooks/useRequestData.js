@@ -7,8 +7,8 @@ const useRequestData = (initialState, url) => {
     const [loading, setLoading] = useState(false)
 
     const getData = (url) => {
-      
-        setLoading(true)
+
+    setLoading(true)
 
         axios.get(url)
             .then((res) => {
@@ -20,6 +20,16 @@ const useRequestData = (initialState, url) => {
             })
     }
 
+//     const getData = (url) => {
+//         url.then(res => {
+//         setLoading(false)
+//         setData(res.data)
+
+//     }).catch(e => {
+//         console.log("error", e)
+//         setLoading(false)
+//     })
+// }
     useEffect(() => {
         getData(url)
     }, [url])
